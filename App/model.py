@@ -2,14 +2,9 @@ import requests
 import os 
 from dotenv import load_dotenv
 load_dotenv()
-
 COLAB_API_URL = os.getenv("COLAB_API_URL")
-
-
 def analyse_image(uploaded_image):
-
     url = COLAB_API_URL.rstrip("/") + "/analyze"
-
     response = requests.post(
         url,
         files={
@@ -23,9 +18,6 @@ def analyse_image(uploaded_image):
             "ngrok-skip-browser-warning": "true"
         }
     )
-
     print("Request URL:", url)
-
     response.raise_for_status()
-
     return response.json()["description"]

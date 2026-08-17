@@ -1,7 +1,6 @@
 from model import analyse_image
 import streamlit as st
 st.title("Image Search Model")
-
 upload_image = st.file_uploader(
     "Insert the Image", accept_multiple_files="false",type=["jpg","png","WebP","AVIF"] 
 )
