@@ -14,6 +14,7 @@ def analyse_image(uploaded_image):
                 uploaded_image.type
             )
         },
+        # 
         headers={
             "ngrok-skip-browser-warning": "true"
         }
